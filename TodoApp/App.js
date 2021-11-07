@@ -5,7 +5,7 @@ import * as Screens from './src/constants/Screens';
 import TodoList from './src/screens/TodoList';
 import Login from './src/screens/Login';
 import Home from './src/screens/Home';
-import Phone from './src/screens/Phone';
+import Dialer from './src/screens/Dialer';
 import TypicalList from './src/screens/TypicalList';
 import store from './src/redux/configureStore';
 import {Provider} from 'react-redux';
@@ -32,7 +32,7 @@ function App() {
           <Stack.Screen name={Screens.TODO_LIST} component={TodoList} />
           <Stack.Screen name={Screens.LOGIN} component={Login} />
           <Stack.Screen name={Screens.HOME} component={Home} />
-          <Stack.Screen name={Screens.PHONE} component={Phone} />
+          <Stack.Screen name={Screens.DIALER} component={Dialer} />
           <Stack.Screen
             name={Screens.TYPICAL_LIST_FAB}
             component={TypicalList}

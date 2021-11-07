@@ -1,7 +1,7 @@
 export const HOME = 'Home';
 export const LOGIN = 'Login';
 export const TODO_LIST = 'Todo List';
-export const PHONE = 'Phone';
+export const DIALER = 'Dialer';
 export const TYPICAL_LIST_FAB = 'Typical List';
 
 // module.exports = Object.freeze({

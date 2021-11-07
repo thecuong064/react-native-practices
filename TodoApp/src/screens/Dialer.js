@@ -8,7 +8,7 @@ import {
   delCharFromPhoneNumber,
   clearPhoneNumber,
   clearPhoneNumber1,
-} from '../redux/Phone/actions';
+} from '../redux/Dialer/actions';
 
 import {
   KeyboardAvoidingView,
@@ -90,7 +90,7 @@ function DeleteButton(props) {
   // }
 }
 
-function Phone({navigation}) {
+function Dialer({navigation}) {
   const [input, setInput] = React.useState('');
   const phoneNumber = useSelector(state => state.phoneNumber);
 
@@ -325,4 +325,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Phone;
+export default Dialer;

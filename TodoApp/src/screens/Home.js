@@ -34,8 +34,8 @@ function Home({route, navigation}) {
           onPress={() => navigation.navigate(Screens.TODO_LIST)}
         />
         <HomeItem
-          title={Screens.PHONE}
-          onPress={() => navigation.navigate(Screens.PHONE)}
+          title={Screens.DIALER}
+          onPress={() => navigation.navigate(Screens.DIALER)}
         />
       </View>
       <View style={styles.itemRow}>
