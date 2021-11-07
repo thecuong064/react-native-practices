@@ -7,6 +7,7 @@ import {
   addCharToPhoneNumber,
   delCharFromPhoneNumber,
   clearPhoneNumber,
+  clearPhoneNumber1,
 } from '../redux/Phone/actions';
 
 import {
@@ -118,7 +119,8 @@ function Phone({navigation}) {
 
   function clear() {
     // setInput('');
-    store.dispatch(clearPhoneNumber());
+    //store.dispatch(clearPhoneNumber());
+    store.dispatch(clearPhoneNumber1);
   }
 
   function dial() {

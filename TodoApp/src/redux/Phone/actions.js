@@ -14,3 +14,12 @@ export const clearPhoneNumber = () => ({
   type: PhoneActionTypes.PHONE_NUMBER_CLEAR,
   payload: null,
 });
+
+export const clearPhoneNumber1 = {
+  type: PhoneActionTypes.PHONE_NUMBER_CLEAR,
+  payload: null,
+};
+
+var handleClick = () => {
+  console.log('clicked');
+};
