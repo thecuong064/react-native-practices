@@ -40,8 +40,8 @@ function Home({route, navigation}) {
       </View>
       <View style={styles.itemRow}>
         <HomeItem
-          title={Screens.TYPICAL_LIST_FAB}
-          onPress={() => navigation.navigate(Screens.TYPICAL_LIST_FAB)}
+          title={Screens.TYPICAL_LIST}
+          onPress={() => navigation.navigate(Screens.TYPICAL_LIST)}
         />
         <HomeItem
           title={Screens.API_PRACTICES}

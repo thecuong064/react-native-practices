@@ -4,7 +4,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import store from './src/redux/configureStore';
 import {Provider} from 'react-redux';
 
-import * as Screens from './src/constants/Screens';
+import Screens from './src/constants/Screens';
 import TodoList from './src/screens/TodoList';
 import Login from './src/screens/Login';
 import Home from './src/screens/Home';
@@ -36,10 +36,7 @@ function App() {
           <Stack.Screen name={Screens.HOME} component={Home} />
           <Stack.Screen name={Screens.DIALER} component={Dialer} />
           <Stack.Screen name={Screens.API_PRACTICES} component={ApiPractices} />
-          <Stack.Screen
-            name={Screens.TYPICAL_LIST_FAB}
-            component={TypicalList}
-          />
+          <Stack.Screen name={Screens.TYPICAL_LIST} component={TypicalList} />
         </Stack.Navigator>
       </NavigationContainer>
     </Provider>
