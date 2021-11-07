@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import * as Screens from '../constants/Screens';
+import Screens from '../constants/Screens';
 import store from '../redux/configureStore';
 import {changeUser} from '../redux/common/actions';
 
