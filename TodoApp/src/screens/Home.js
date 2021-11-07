@@ -43,7 +43,10 @@ function Home({route, navigation}) {
           title={Screens.TYPICAL_LIST_FAB}
           onPress={() => navigation.navigate(Screens.TYPICAL_LIST_FAB)}
         />
-        <HomeItem title="New screen" />
+        <HomeItem
+          title={Screens.API_PRACTICES}
+          onPress={() => navigation.navigate(Screens.API_PRACTICES)}
+        />
       </View>
       <View style={styles.itemRow}>
         <HomeItem title="New screen" />

@@ -3,6 +3,7 @@ export const LOGIN = 'Login';
 export const TODO_LIST = 'Todo List';
 export const DIALER = 'Dialer';
 export const TYPICAL_LIST_FAB = 'Typical List';
+export const API_PRACTICES = 'Api Practices';
 
 // module.exports = Object.freeze({
 //   HOME: 'Home',
