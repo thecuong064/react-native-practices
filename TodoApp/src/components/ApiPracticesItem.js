@@ -13,24 +13,21 @@ import {
   FlatList,
   SectionList,
 } from 'react-native';
+import ApiPractices from '../screens/ApiPractices';
 
-const SampleItem = ({item}) => {
+const ApiPracticesItem = props => {
   return (
-    <TouchableOpacity style={styles.wrapper} onPress={item.onPress}>
+    <TouchableOpacity style={styles.wrapper} onPress={props.item.onPress}>
       <Image
         source={
-          item.imageSrc
+          props.item?.imageSrc
             ? {
-                uri: item.imageSrc,
+                uri: props.item?.imageSrc,
               }
             : require('../assets/sample_avatar.png')
         }
         style={styles.image}
       />
-      <View style={styles.textContentWrapper}>
-        <Text style={styles.title}>{item.title}</Text>
-        <Text style={styles.description}>{item.description}</Text>
-      </View>
     </TouchableOpacity>
   );
 };
@@ -40,25 +37,13 @@ const styles = StyleSheet.create({
     padding: 10,
     flexDirection: 'row',
   },
-  textContentWrapper: {
-    flex: 1,
-    marginLeft: 10,
-    flexDirection: 'column',
-  },
-  title: {
-    color: '#000',
-    fontWeight: 'bold',
-  },
-  description: {
-    color: '#a3a2a2',
-  },
   image: {
     width: 60,
     height: 60,
-    borderRadius: 30,
+    borderRadius: 0,
     borderColor: 'orange',
     borderWidth: 2,
   },
 });
 
-export default SampleItem;
+export default ApiPracticesItem;
