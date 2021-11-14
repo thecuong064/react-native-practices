@@ -11,6 +11,7 @@ import Home from './src/screens/Home';
 import Dialer from './src/screens/Dialer';
 import TypicalList from './src/screens/TypicalList';
 import ApiPractices from './src/screens/ApiPractices';
+import InputControls from './src/screens/InputControls';
 
 const Stack = createNativeStackNavigator();
 
@@ -37,6 +38,10 @@ function App() {
           <Stack.Screen name={Screens.DIALER} component={Dialer} />
           <Stack.Screen name={Screens.API_PRACTICES} component={ApiPractices} />
           <Stack.Screen name={Screens.TYPICAL_LIST} component={TypicalList} />
+          <Stack.Screen
+            name={Screens.INPUT_CONTROLS}
+            component={InputControls}
+          />
         </Stack.Navigator>
       </NavigationContainer>
     </Provider>

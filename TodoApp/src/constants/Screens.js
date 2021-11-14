@@ -18,6 +18,7 @@ const Screens = {
   DIALER: 'Dialer',
   TYPICAL_LIST: 'Typical List',
   API_PRACTICES: 'Api Practices',
+  INPUT_CONTROLS: 'Input Controls',
 };
 
 export default Screens;

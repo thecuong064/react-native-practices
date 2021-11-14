@@ -49,7 +49,10 @@ function Home({route, navigation}) {
         />
       </View>
       <View style={styles.itemRow}>
-        <HomeItem title="New screen" />
+        <HomeItem
+          title={Screens.INPUT_CONTROLS}
+          onPress={() => navigation.navigate(Screens.INPUT_CONTROLS)}
+        />
         <HomeItem title="New screen" />
       </View>
       <View style={styles.itemRow}>

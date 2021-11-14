@@ -13,7 +13,6 @@ import {
   FlatList,
   SectionList,
 } from 'react-native';
-import ApiPractices from '../screens/ApiPractices';
 
 const ApiPracticesItem = props => {
   return (
