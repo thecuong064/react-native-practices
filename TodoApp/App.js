@@ -12,6 +12,7 @@ import Dialer from './src/screens/Dialer';
 import TypicalList from './src/screens/TypicalList';
 import ApiPractices from './src/screens/ApiPractices';
 import InputControls from './src/screens/InputControls';
+import BottomTabs from './src/screens/BottomTabs';
 
 const Stack = createNativeStackNavigator();
 
@@ -42,6 +43,7 @@ function App() {
             name={Screens.INPUT_CONTROLS}
             component={InputControls}
           />
+          <Stack.Screen name={Screens.BOTTOM_TABS} component={BottomTabs} />
         </Stack.Navigator>
       </NavigationContainer>
     </Provider>

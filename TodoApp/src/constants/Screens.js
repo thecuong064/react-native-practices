@@ -19,6 +19,7 @@ const Screens = {
   TYPICAL_LIST: 'Typical List',
   API_PRACTICES: 'Api Practices',
   INPUT_CONTROLS: 'Input Controls',
+  BOTTOM_TABS: 'Bottom tabs',
 };
 
 export default Screens;
