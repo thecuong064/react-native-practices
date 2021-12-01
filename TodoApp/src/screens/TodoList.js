@@ -25,7 +25,7 @@ function TodoList({navigation}) {
   const [completedTaskList, setCompletedTasksList] = React.useState([]);
 
   React.useEffect(() => {
-    navigation.setOptions({title: `Task count: ${tasksList?.length}`});
+    //navigation.setOptions({title: `Task count: ${tasksList?.length}`});
     console.log('title updated');
   }, [tasksList]);
 

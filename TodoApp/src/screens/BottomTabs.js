@@ -25,7 +25,7 @@ const BottomTabs = ({navigation}) => {
       <Tab.Screen
         name="TodoList"
         component={TodoList}
-        options={{headerShown: false}}
+        options={{headerShown: false, tabBarIconStyle: {display: 'none'}}}
       />
     </Tab.Navigator>
   );
