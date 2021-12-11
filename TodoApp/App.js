@@ -12,7 +12,7 @@ import Dialer from './src/screens/Dialer';
 import TypicalList from './src/screens/TypicalList';
 import ApiPractices from './src/screens/ApiPractices';
 import InputControls from './src/screens/InputControls';
-import BottomTabs from './src/screens/BottomTabs';
+import BottomTabs from './src/screens/BottomTabs/BottomTabs';
 
 const Stack = createNativeStackNavigator();
 
