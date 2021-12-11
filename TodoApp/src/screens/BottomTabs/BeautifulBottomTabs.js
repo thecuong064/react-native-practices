@@ -32,6 +32,8 @@ const TabIcon = props => {
     <View
       style={{
         alignItems: 'center',
+        justifyContent: 'space-evenly',
+        flex: 1,
       }}>
       <Image
         source={source}
@@ -43,7 +45,6 @@ const TabIcon = props => {
           width: 4,
           height: 4,
           borderRadius: 2,
-          marginTop: 5,
           backgroundColor: tabFocusedColor,
           display: focused ? 'flex' : 'none',
         }}
