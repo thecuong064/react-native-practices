@@ -20,6 +20,7 @@ const Screens = {
   API_PRACTICES: 'Api Practices',
   INPUT_CONTROLS: 'Input Controls',
   BOTTOM_TABS: 'Bottom tabs',
+  BEAUTIFUL_BOTTOM_TABS: 'Beautiful bottom tabs',
 };
 
 export default Screens;

@@ -13,6 +13,7 @@ import TypicalList from './src/screens/TypicalList';
 import ApiPractices from './src/screens/ApiPractices';
 import InputControls from './src/screens/InputControls';
 import BottomTabs from './src/screens/BottomTabs/BottomTabs';
+import BeautifulBottomTabs from './src/screens/BottomTabs/BeautifulBottomTabs';
 
 const Stack = createNativeStackNavigator();
 
@@ -44,6 +45,10 @@ function App() {
             component={InputControls}
           />
           <Stack.Screen name={Screens.BOTTOM_TABS} component={BottomTabs} />
+          <Stack.Screen
+            name={Screens.BEAUTIFUL_BOTTOM_TABS}
+            component={BeautifulBottomTabs}
+          />
         </Stack.Navigator>
       </NavigationContainer>
     </Provider>

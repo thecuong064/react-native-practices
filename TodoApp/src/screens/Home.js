@@ -59,7 +59,10 @@ function Home({route, navigation}) {
         />
       </View>
       <View style={styles.itemRow}>
-        <HomeItem title="New screen" />
+        <HomeItem
+          title={Screens.BEAUTIFUL_BOTTOM_TABS}
+          onPress={() => navigation.navigate(Screens.BEAUTIFUL_BOTTOM_TABS)}
+        />
         <HomeItem title="New screen" />
       </View>
     </SafeAreaView>
