@@ -19,12 +19,32 @@ import Home from './Home';
 import Explore from './Explore';
 import Favorites from './Favorites';
 import Profile from './Profile';
+import TakePhoto from './TakePhoto';
 
 const Tab = createBottomTabNavigator();
 
-const blur = () => {
-  return <View />;
-};
+const isTabbarAbsolute = false;
+
+const TakePhotoButton = ({children, onPress}) => (
+  <TouchableOpacity 
+    style={{
+      top: -25,
+      justifyContent: 'center',
+      alignItems: 'center'
+    }}
+    onPress={onPress}
+  >
+    <View style={{
+      width: 40,
+      height: 40,
+      borderRadius: 20,
+      backgroundColor: '#e32f45',
+      elevation: 5,
+    }}>
+      {children}
+    </View>
+  </TouchableOpacity>
+);
 
 const TabIcon = props => {
   let {source, focused, title} = props;
@@ -59,7 +79,7 @@ const BeautifulBottomTabs = ({navigation}) => {
       screenOptions={{
         tabBarShowLabel: false,
         headerShown: false,
-        tabBarStyle: styles.tabBar,
+        tabBarStyle: isTabbarAbsolute ? styles.tabBarAbsolute : styles.tabBar,
         // tabBarBackground: blur
       }}>
       <Tab.Screen
@@ -86,6 +106,26 @@ const BeautifulBottomTabs = ({navigation}) => {
               title="Explore"
             />
           ),
+        }}
+      />
+      <Tab.Screen
+        name="TakePhoto"
+        component={TakePhoto}
+        options={{
+          tabBarIcon: ({focused}) => (
+            <Image
+              source={require('../../assets/bottom_tabs/ic_bottom_tab_add.png')}
+              focused={false}
+              style={{
+                width: 20,
+                height: 20,
+                tintColor: '#fff'
+              }}
+            />
+          ),
+          tabBarButton: (props) => (
+            <TakePhotoButton {...props}/>
+          )
         }}
       />
       <Tab.Screen
@@ -123,13 +163,18 @@ const tabDefaultColor = '#748c94';
 
 const styles = StyleSheet.create({
   tabBar: {
-    // position: 'absolute',
-    // bottom: 0,
-    // left: 20,
-    // right: 20,
-    // elevation: 0,
-    // backgroundColor: '#fff000',
-    // borderRadius: 15,
+    elevation: 0,
+    borderTopColor: '#fff'
+  },
+  tabBarAbsolute: {
+    position: 'absolute',
+    bottom: 0,
+    left: 20,
+    right: 20,
+    elevation: 0,
+    backgroundColor: '#fff000',
+    borderRadius: 15,
+    height: 45
   },
   tabIconDefault: {
     tintColor: tabDefaultColor,
