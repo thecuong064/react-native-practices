@@ -11,7 +11,7 @@ import {
   TouchableOpacity,
   SafeAreaView,
   Platform,
-  FlatList,
+  Alert,
   Image,
 } from 'react-native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
@@ -73,6 +73,17 @@ const TabIcon = props => {
   );
 };
 
+function takePhoto() {
+  Alert.alert('Take photo', null, [
+    {
+      text: 'Cancel',
+      onPress: () => console.log('Cancel Pressed'),
+      style: 'cancel',
+    },
+    {text: 'OK', onPress: () => console.log('OK Pressed')},
+  ]);
+}
+
 const BeautifulBottomTabs = ({navigation}) => {
   return (
     <Tab.Navigator
@@ -124,7 +135,10 @@ const BeautifulBottomTabs = ({navigation}) => {
             />
           ),
           tabBarButton: (props) => (
-            <TakePhotoButton {...props}/>
+            <TakePhotoButton
+             {...props} 
+             // override changing tab behavior
+             onPress={takePhoto}/>
           )
         }}
       />
