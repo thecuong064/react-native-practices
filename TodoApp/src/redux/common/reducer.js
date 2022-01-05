@@ -1,4 +1,4 @@
-import Types from './constants';
+import CommonActionTypes from './constants';
 
 const initalUser = {
   name: '',
@@ -9,8 +9,7 @@ const userReducer = (state = initalUser, action) => {
   const {payload, type} = action;
 
   switch (type) {
-    case Types.USER_CHANGE: {
-      console;
+    case CommonActionTypes.USER_CHANGE: {
       return payload;
     }
     default:

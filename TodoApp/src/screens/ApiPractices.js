@@ -11,6 +11,9 @@ import {
 import Slider from '@react-native-community/slider';
 import ApiPracticesItem from '../components/ApiPracticesItem';
 import API_END_POINTS from '../constants/apiUrl';
+import {useDispatch, useSelector} from 'react-redux';
+import {getImages} from '../redux/ApiPracties/actions';
+import store from '../redux/configureStore';
 
 const photoWidth = 60;
 const photoHeight = 60;
@@ -20,6 +23,7 @@ const ApiPractices = () => {
   const [isLoading, setLoading] = useState(true);
   const [photos, setPhotos] = useState([]);
   const [itemPerRow, setItemPerRow] = useState(1);
+  const newPhotos = useSelector(state => state.images);
 
   const getPhotos = async () => {
     try {
@@ -37,7 +41,7 @@ const ApiPractices = () => {
   };
 
   useEffect(() => {
-    getPhotos();
+    store.dispatch(getImages);
   }, []);
 
   const renderItem = ({item}) => {
@@ -59,7 +63,7 @@ const ApiPractices = () => {
 
   return (
     <SafeAreaView style={styles.container}>
-      {isLoading ? (
+      {!newPhotos || newPhotos.length <= 0 ? (
         <ActivityIndicator />
       ) : (
         <View style={styles.contentContainer}>
@@ -78,7 +82,7 @@ const ApiPractices = () => {
               style={{backgroundColor: 'red'}}>
               <FlatList
                 style={styles.itemsList}
-                data={photos}
+                data={newPhotos}
                 renderItem={renderItem}
                 keyExtractor={item => item.id}
                 horizontal={false}
