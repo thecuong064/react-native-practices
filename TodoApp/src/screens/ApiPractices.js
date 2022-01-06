@@ -41,7 +41,7 @@ const ApiPractices = () => {
   };
 
   useEffect(() => {
-    store.dispatch(getImages);
+    store.dispatch(getImages());
   }, []);
 
   const renderItem = ({item}) => {

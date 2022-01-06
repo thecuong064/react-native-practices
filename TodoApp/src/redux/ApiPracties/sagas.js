@@ -1,4 +1,4 @@
-import {call, put, takeEvery, takeLatest} from 'redux-saga/effects';
+import {call, put, fork, takeLatest} from 'redux-saga/effects';
 import {loadImages} from './actions';
 import ApiActionTypes from './constants';
 import {getImagesApiRequest} from './requests/images';
@@ -17,10 +17,10 @@ export function* getImagesAsync() {
   }
 }
 
-// function* getListCardWatch() {
-//   yield takeLatest(ApiActionTypes.LOAD_IMAGES, getImagesAsync);
-// }
+function* getListCardWatch() {
+  yield takeLatest(ApiActionTypes.GET_IMAGES, getImagesAsync);
+}
 
-// export default function* rootChild() {
-//   yield fork(getListCardWatch);
-// }
+export default function* rootChild() {
+  yield fork(getListCardWatch);
+}
