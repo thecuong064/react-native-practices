@@ -7,6 +7,7 @@ import {
   StyleSheet,
   SafeAreaView,
   ScrollView,
+  Button,
 } from 'react-native';
 import Slider from '@react-native-community/slider';
 import ApiPracticesItem from '../components/ApiPracticesItem';
@@ -42,8 +43,12 @@ const ApiPractices = () => {
   };
 
   useEffect(() => {
-    store.dispatch(getImages());
+    loadImages();
   }, []);
+
+  const loadImages = () => {
+    store.dispatch(getImages());
+  };
 
   const renderItem = ({item}) => {
     let parsedItem = {
@@ -64,12 +69,12 @@ const ApiPractices = () => {
 
   return (
     <SafeAreaView style={styles.container}>
-      {!newPhotos || newPhotos.length <= 0 ? (
+      {!error && (!newPhotos || newPhotos.length) <= 0 ? (
+        <ActivityIndicator />
+      ) : error != null ? (
         <View>
-          {error != null && (
-            <Text style={{alignSelf: 'center'}}>Error: {error.message}</Text>
-          )}
-          <ActivityIndicator />
+          <Text style={{alignSelf: 'center'}}>Error: {error.message}</Text>
+          <Button onPress={loadImages} title="Try again" color="#841584" />
         </View>
       ) : (
         <View style={styles.contentContainer}>
