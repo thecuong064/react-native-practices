@@ -5,7 +5,12 @@ export const getImages = () => ({
   payload: null,
 });
 
-export const loadImages = payload => ({
-  type: ApiActionTypes.LOAD_IMAGES,
+export const loadImagesSuccess = payload => ({
+  type: ApiActionTypes.LOAD_IMAGES_SUCCESS,
+  payload: payload,
+});
+
+export const loadImagesFailed = payload => ({
+  type: ApiActionTypes.LOAD_IMAGES_FAILED,
   payload: payload,
 });

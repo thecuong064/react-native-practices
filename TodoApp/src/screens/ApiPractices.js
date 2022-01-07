@@ -23,7 +23,8 @@ const ApiPractices = () => {
   const [isLoading, setLoading] = useState(true);
   const [photos, setPhotos] = useState([]);
   const [itemPerRow, setItemPerRow] = useState(1);
-  const newPhotos = useSelector(state => state.images);
+  const newPhotos = useSelector(state => state.images.data);
+  const error = useSelector(state => state.images.error);
 
   const getPhotos = async () => {
     try {
@@ -64,7 +65,12 @@ const ApiPractices = () => {
   return (
     <SafeAreaView style={styles.container}>
       {!newPhotos || newPhotos.length <= 0 ? (
-        <ActivityIndicator />
+        <View>
+          {error != null && (
+            <Text style={{alignSelf: 'center'}}>Error: {error.message}</Text>
+          )}
+          <ActivityIndicator />
+        </View>
       ) : (
         <View style={styles.contentContainer}>
           <Text style={{alignSelf: 'center'}}>{itemPerRow}</Text>
