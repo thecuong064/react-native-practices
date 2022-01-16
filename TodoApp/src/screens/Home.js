@@ -63,7 +63,10 @@ function Home({route, navigation}) {
           title={Screens.BEAUTIFUL_BOTTOM_TABS}
           onPress={() => navigation.navigate(Screens.BEAUTIFUL_BOTTOM_TABS)}
         />
-        <HomeItem title="New screen" />
+        <HomeItem
+          title="Axios Practices"
+          onPress={() => navigation.navigate(Screens.AXIOS_PRACTICES)}
+        />
       </View>
     </SafeAreaView>
   );

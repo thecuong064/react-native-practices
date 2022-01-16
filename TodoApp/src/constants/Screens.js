@@ -21,6 +21,7 @@ const Screens = {
   INPUT_CONTROLS: 'Input Controls',
   BOTTOM_TABS: 'Bottom tabs',
   BEAUTIFUL_BOTTOM_TABS: 'Beautiful bottom tabs',
+  AXIOS_PRACTICES: 'Axios practices',
 };
 
 export default Screens;

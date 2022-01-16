@@ -14,6 +14,7 @@ import ApiPractices from './src/screens/ApiPractices';
 import InputControls from './src/screens/InputControls';
 import BottomTabs from './src/screens/BottomTabs/BottomTabs';
 import BeautifulBottomTabs from './src/screens/BottomTabs/BeautifulBottomTabs';
+import AxiosPractices from './src/screens/AxiosPractices';
 
 const Stack = createNativeStackNavigator();
 
@@ -48,6 +49,10 @@ function App() {
           <Stack.Screen
             name={Screens.BEAUTIFUL_BOTTOM_TABS}
             component={BeautifulBottomTabs}
+          />
+          <Stack.Screen
+            name={Screens.AXIOS_PRACTICES}
+            component={AxiosPractices}
           />
         </Stack.Navigator>
       </NavigationContainer>
