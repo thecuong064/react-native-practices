@@ -10,4 +10,7 @@ export const API_END_POINTS = {
   getUser: id => {
     return `/users/${id}`;
   },
+  getPhotos: () => {
+    return `/photos`;
+  },
 };
