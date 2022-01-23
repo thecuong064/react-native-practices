@@ -13,4 +13,7 @@ export const API_END_POINTS = {
   getPhotos: () => {
     return `/photos`;
   },
+  getPosts: params => {
+    return `/posts`;
+  },
 };
