@@ -3,10 +3,13 @@ import {FlatList} from 'react-native';
 
 const FlatListLoadMore = forwardRef((props, ref) => {
   const [hasScrolled, setHasScrolled] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleLoadMore = () => {
-    if (hasScrolled && props?.onLoadMore) {
+    if (hasScrolled && props?.onLoadMore && !isLoading) {
+      setIsLoading(true);
       props.onLoadMore();
+      setIsLoading(false);
     }
   };
   return (

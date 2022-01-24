@@ -49,7 +49,6 @@ const AxiosPractices = ({navigation}) => {
         _page: pageCount + 1,
         _limit: 10,
       };
-      console.log(params._page);
       let newPosts = await postApi.getAllPosts(params);
       setPageCount(pageCount + 1);
       await delay(500);
@@ -107,6 +106,7 @@ const AxiosPractices = ({navigation}) => {
       />
       <Button onPress={() => getUser(userId)} title="Get user" />
       <Button onPress={getPosts} title="Get all posts" />
+      {isLoading && <ActivityIndicator />}
       <FlatListLoadMore
         style={styles.itemsList}
         data={posts}
@@ -115,7 +115,6 @@ const AxiosPractices = ({navigation}) => {
         showsVerticalScrollIndicator={true}
         onLoadMore={getPosts}
       />
-      {isLoading && <ActivityIndicator />}
     </SafeAreaView>
   );
 };
