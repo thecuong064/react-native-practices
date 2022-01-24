@@ -21,6 +21,7 @@ import {
 } from 'react-native';
 import userApis from '../api/usersApi';
 import postApi from '../api/postApi';
+import FlatListLoadMore from '../components/FlatListLoadMore';
 
 const AxiosPractices = ({navigation}) => {
   const [userId, setUserId] = useState('');
@@ -106,12 +107,13 @@ const AxiosPractices = ({navigation}) => {
       />
       <Button onPress={() => getUser(userId)} title="Get user" />
       <Button onPress={getPosts} title="Get all posts" />
-      <FlatList
+      <FlatListLoadMore
         style={styles.itemsList}
         data={posts}
         renderItem={renderPostItem}
         keyExtractor={item => item.id}
         showsVerticalScrollIndicator={true}
+        onLoadMore={getPosts}
       />
       {isLoading && <ActivityIndicator />}
     </SafeAreaView>
