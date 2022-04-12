@@ -14,7 +14,22 @@ import {
 } from 'react-native';
 
 const Profile = () => {
-  return <Text>Profile</Text>;
+  const [value, onChangeText] = React.useState('');
+  return (
+    <>
+      <Text>Profile</Text>
+      <TextInput
+        onChangeText={text => onChangeText(text)}
+        value={value}
+        style={{
+          height: 40,
+          margin: 12,
+          borderWidth: 1,
+          padding: 10,
+        }}
+      />
+    </>
+  );
 };
 
 const styles = StyleSheet.create({

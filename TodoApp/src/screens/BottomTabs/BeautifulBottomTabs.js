@@ -26,21 +26,21 @@ const Tab = createBottomTabNavigator();
 const isTabbarAbsolute = false;
 
 const TakePhotoButton = ({children, onPress}) => (
-  <TouchableOpacity 
+  <TouchableOpacity
     style={{
       top: -25,
       justifyContent: 'center',
-      alignItems: 'center'
+      alignItems: 'center',
     }}
-    onPress={onPress}
-  >
-    <View style={{
-      width: 40,
-      height: 40,
-      borderRadius: 20,
-      backgroundColor: '#e32f45',
-      elevation: 5,
-    }}>
+    onPress={onPress}>
+    <View
+      style={{
+        width: 40,
+        height: 40,
+        borderRadius: 20,
+        backgroundColor: '#e32f45',
+        elevation: 5,
+      }}>
       {children}
     </View>
   </TouchableOpacity>
@@ -91,7 +91,8 @@ const BeautifulBottomTabs = ({navigation}) => {
         tabBarShowLabel: false,
         headerShown: false,
         tabBarStyle: isTabbarAbsolute ? styles.tabBarAbsolute : styles.tabBar,
-        // tabBarBackground: blur
+        // tabBarBackground: blur,
+        tabBarHideOnKeyboard: true,
       }}>
       <Tab.Screen
         name="Home"
@@ -130,16 +131,17 @@ const BeautifulBottomTabs = ({navigation}) => {
               style={{
                 width: 20,
                 height: 20,
-                tintColor: '#fff'
+                tintColor: '#fff',
               }}
             />
           ),
-          tabBarButton: (props) => (
+          tabBarButton: props => (
             <TakePhotoButton
-             {...props} 
-             // override changing tab behavior
-             onPress={takePhoto}/>
-          )
+              {...props}
+              // override changing tab behavior
+              onPress={takePhoto}
+            />
+          ),
         }}
       />
       <Tab.Screen
@@ -178,7 +180,7 @@ const tabDefaultColor = '#748c94';
 const styles = StyleSheet.create({
   tabBar: {
     elevation: 0,
-    borderTopColor: '#fff'
+    borderTopColor: '#fff',
   },
   tabBarAbsolute: {
     position: 'absolute',
@@ -188,7 +190,7 @@ const styles = StyleSheet.create({
     elevation: 0,
     backgroundColor: '#fff000',
     borderRadius: 15,
-    height: 45
+    height: 45,
   },
   tabIconDefault: {
     tintColor: tabDefaultColor,
