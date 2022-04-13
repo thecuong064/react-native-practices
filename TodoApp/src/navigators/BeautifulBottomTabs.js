@@ -1,26 +1,19 @@
 import React, {useEffect, useState} from 'react';
-import Dialer from '../Dialer';
-import TodoList from '../TodoList';
 import {
-  KeyboardAvoidingView,
   Keyboard,
   StyleSheet,
-  Text,
   View,
-  TextInput,
   TouchableOpacity,
-  SafeAreaView,
-  Platform,
   Alert,
   Image,
 } from 'react-native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import Home from './Home';
-import Explore from './Explore';
-import Favorites from './Favorites';
-import Profile from './Profile';
-import TakePhoto from './TakePhoto';
-import {KeyboardEvents} from '../../constants/KeyboardEvents';
+import Home from '../screens/BottomTabs/Home';
+import Explore from '../screens/BottomTabs/Explore';
+import Favorites from '../screens/BottomTabs/Favorites';
+import Profile from '../screens/BottomTabs/Profile';
+import TakePhoto from '../screens/BottomTabs/TakePhoto';
+import {KeyboardEvents} from '../constants/KeyboardEvents';
 
 const Tab = createBottomTabNavigator();
 
@@ -122,7 +115,7 @@ const BeautifulBottomTabs = ({navigation}) => {
         options={{
           tabBarIcon: ({focused}) => (
             <TabIcon
-              source={require('../../assets/bottom_tabs/ic_bottom_tab_home.png')}
+              source={require('../assets/bottom_tabs/ic_bottom_tab_home.png')}
               focused={focused}
               title="Home"
             />
@@ -135,7 +128,7 @@ const BeautifulBottomTabs = ({navigation}) => {
         options={{
           tabBarIcon: ({focused}) => (
             <TabIcon
-              source={require('../../assets/bottom_tabs/ic_bottom_tab_explore.png')}
+              source={require('../assets/bottom_tabs/ic_bottom_tab_explore.png')}
               focused={focused}
               title="Explore"
             />
@@ -148,7 +141,7 @@ const BeautifulBottomTabs = ({navigation}) => {
         options={{
           tabBarIcon: ({focused}) => (
             <Image
-              source={require('../../assets/bottom_tabs/ic_bottom_tab_add.png')}
+              source={require('../assets/bottom_tabs/ic_bottom_tab_add.png')}
               focused={false}
               style={{
                 width: 20,
@@ -176,7 +169,7 @@ const BeautifulBottomTabs = ({navigation}) => {
         options={{
           tabBarIcon: ({focused}) => (
             <TabIcon
-              source={require('../../assets/bottom_tabs/ic_bottom_tab_fav.png')}
+              source={require('../assets/bottom_tabs/ic_bottom_tab_fav.png')}
               focused={focused}
               title="Favorites"
             />
@@ -189,7 +182,7 @@ const BeautifulBottomTabs = ({navigation}) => {
         options={{
           tabBarIcon: ({focused}) => (
             <TabIcon
-              source={require('../../assets/bottom_tabs/ic_bottom_tab_profile.png')}
+              source={require('../assets/bottom_tabs/ic_bottom_tab_profile.png')}
               focused={focused}
               title="Profile"
             />

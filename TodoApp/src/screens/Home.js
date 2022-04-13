@@ -1,6 +1,6 @@
 import React from 'react';
 import HomeItem from '../components/HomeItem';
-import Screens from '../constants/Screens';
+import Screens from '../navigators/Screens';
 import store from '../redux/configureStore';
 
 import {

@@ -1,6 +1,6 @@
 import React from 'react';
-import Dialer from '../Dialer';
-import TodoList from '../TodoList';
+import Dialer from '../screens/Dialer';
+import TodoList from '../screens/TodoList';
 import {
   KeyboardAvoidingView,
   Keyboard,
@@ -56,7 +56,7 @@ const BottomTabs = ({navigation}) => {
         options={{
           tabBarIcon: ({focused}) => (
             <TabIcon
-              source={require('../../assets/backspace_white.png')}
+              source={require('../assets/backspace_white.png')}
               focused={focused}
               title="Dialer"
             />
@@ -70,7 +70,7 @@ const BottomTabs = ({navigation}) => {
           headerShown: false,
           tabBarIcon: ({focused}) => (
             <TabIcon
-              source={require('../../assets/backspace_white.png')}
+              source={require('../assets/backspace_white.png')}
               focused={focused}
               title="To do"
             />
