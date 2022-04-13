@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import Dialer from '../Dialer';
 import TodoList from '../TodoList';
 import {
@@ -20,6 +20,7 @@ import Explore from './Explore';
 import Favorites from './Favorites';
 import Profile from './Profile';
 import TakePhoto from './TakePhoto';
+import {KeyboardEvents} from '../../constants/KeyboardEvents';
 
 const Tab = createBottomTabNavigator();
 
@@ -85,6 +86,27 @@ function takePhoto() {
 }
 
 const BeautifulBottomTabs = ({navigation}) => {
+  const [isKeyBoardShown, setIsKeyboardShown] = useState(false);
+
+  useEffect(() => {
+    const showSubscription = Keyboard.addListener(
+      KeyboardEvents.KEYBOARD_DID_SHOW,
+      () => {
+        setIsKeyboardShown(true);
+      },
+    );
+    const hideSubscription = Keyboard.addListener(
+      KeyboardEvents.KEYBOARD_DID_HIDE,
+      () => {
+        setIsKeyboardShown(false);
+      },
+    );
+    return () => {
+      showSubscription.remove();
+      hideSubscription.remove();
+    };
+  }, []);
+
   return (
     <Tab.Navigator
       screenOptions={{
@@ -136,11 +158,15 @@ const BeautifulBottomTabs = ({navigation}) => {
             />
           ),
           tabBarButton: props => (
-            <TakePhotoButton
-              {...props}
-              // override changing tab behavior
-              onPress={takePhoto}
-            />
+            <>
+              {!isKeyBoardShown && (
+                <TakePhotoButton
+                  {...props}
+                  // override changing tab behavior
+                  onPress={takePhoto}
+                />
+              )}
+            </>
           ),
         }}
       />
