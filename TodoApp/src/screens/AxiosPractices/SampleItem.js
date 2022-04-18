@@ -23,7 +23,7 @@ const SampleItem = ({item}) => {
             ? {
                 uri: item.imageSrc,
               }
-            : require('../assets/sample_avatar.png')
+            : require('../../assets/sample_avatar.png')
         }
         style={styles.image}
       />

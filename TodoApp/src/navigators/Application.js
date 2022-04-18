@@ -3,16 +3,18 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 import Screens from './Screens';
-import TodoList from '../screens/TodoList';
-import Login from '../screens/Login';
-import Home from '../screens/Home';
-import Dialer from '../screens/Dialer';
-import TypicalList from '../screens/TypicalList';
-import ApiPractices from '../screens/ApiPractices';
-import InputControls from '../screens/InputControls';
-import AxiosPractices from '../screens/AxiosPractices';
 import BeautifulBottomTabs from './BeautifulBottomTabs';
 import BottomTabs from './BottomTabs';
+import {
+  ApiPractices,
+  AxiosPractices,
+  Dialer,
+  Home,
+  InputControls,
+  Login,
+  TodoList,
+  TypicalList,
+} from '../screens';
 
 const Stack = createNativeStackNavigator();
 

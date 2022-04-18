@@ -8,10 +8,10 @@ import {
   Image,
 } from 'react-native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import Home from '../screens/BottomTabs/Home';
-import Explore from '../screens/BottomTabs/Explore';
-import Favorites from '../screens/BottomTabs/Favorites';
-import Profile from '../screens/BottomTabs/Profile';
+import Home from '../screens/BottomTabs/Home/Home';
+import Explore from '../screens/BottomTabs/Explore/Explore';
+import Favorites from '../screens/BottomTabs/Favorites/Favorites';
+import Profile from '../screens/BottomTabs/Profile/Profile';
 import TakePhoto from '../screens/BottomTabs/TakePhoto';
 import {KeyboardEvents} from '../constants/KeyboardEvents';
 

@@ -1,7 +1,7 @@
 import React from 'react';
-import HomeItem from '../components/HomeItem';
-import Screens from '../navigators/Screens';
-import store from '../redux/configureStore';
+import HomeItem from './HomeItem';
+import Screens from '../../navigators/Screens';
+import store from '../../redux/configureStore';
 
 import {
   KeyboardAvoidingView,

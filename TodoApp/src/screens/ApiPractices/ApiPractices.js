@@ -10,11 +10,11 @@ import {
   Button,
 } from 'react-native';
 import Slider from '@react-native-community/slider';
-import ApiPracticesItem from '../components/ApiPracticesItem';
-import API_END_POINTS from '../constants/apiUrl';
+import ApiPracticesItem from './ApiPracticesItem';
+import API_END_POINTS from '../../constants/apiUrl';
 import {useDispatch, useSelector} from 'react-redux';
-import {getImages} from '../redux/ApiPracties/actions';
-import store from '../redux/configureStore';
+import {getImages} from '../../redux/ApiPracties/actions';
+import store from '../../redux/configureStore';
 
 const photoWidth = 60;
 const photoHeight = 60;

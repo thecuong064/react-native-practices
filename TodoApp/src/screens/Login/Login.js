@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
-import Screens from '../navigators/Screens';
-import store from '../redux/configureStore';
-import {changeUser} from '../redux/common/actions';
+import Screens from '../../navigators/Screens';
+import store from '../../redux/configureStore';
+import {changeUser} from '../../redux/common/actions';
 
 import {
   KeyboardAvoidingView,

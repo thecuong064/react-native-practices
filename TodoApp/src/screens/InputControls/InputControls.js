@@ -19,7 +19,7 @@ import {
 } from 'react-native';
 import CheckBox from '@react-native-community/checkbox';
 import RadioGroup from 'react-native-radio-buttons-group';
-import {CustomRadioButton} from '../components';
+import {CustomRadioButton} from '../../components';
 
 const radioButtonsData = [
   {

@@ -1,8 +1,8 @@
 import React from 'react';
-import SampleItem from '../components/SampleItem';
+import SampleItem from '../AxiosPractices/SampleItem';
 import {useSelector} from 'react-redux';
-import store from '../redux/configureStore';
-import {addItem} from '../redux/TypicalList/actions';
+import store from '../../redux/configureStore';
+import {addItem} from '../../redux/TypicalList/actions';
 
 import {
   KeyboardAvoidingView,

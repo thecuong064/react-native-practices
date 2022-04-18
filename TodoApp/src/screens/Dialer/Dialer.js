@@ -1,14 +1,14 @@
 import React from 'react';
-import PhonePad from '../components/PhonePad';
-import store from '../redux/configureStore';
-import {openDialer} from '../utils/DeviceUtils';
+import PhonePad from './PhonePad';
+import store from '../../redux/configureStore';
+import {openDialer} from '../../utils/DeviceUtils';
 import {useSelector} from 'react-redux';
 import {
   addCharToPhoneNumber,
   delCharFromPhoneNumber,
   clearPhoneNumber,
   clearPhoneNumber1,
-} from '../redux/Dialer/actions';
+} from '../../redux/Dialer/actions';
 
 import {
   KeyboardAvoidingView,
@@ -141,7 +141,7 @@ function Dialer({navigation}) {
         <Text style={styles.input}>{phoneNumber}</Text>
         <DeleteButton
           title={NUMPAD_DELETE}
-          imageSrc={require('../assets/backspace_white.png')}
+          imageSrc={require('../../assets/backspace_white.png')}
           onPress={() => {
             del();
           }}

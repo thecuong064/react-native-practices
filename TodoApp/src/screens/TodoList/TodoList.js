@@ -1,5 +1,5 @@
 import React from 'react';
-import Task from '../components/Task';
+import Task from './Task';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 

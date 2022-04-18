@@ -1,19 +1,7 @@
 import React from 'react';
-import Dialer from '../screens/Dialer';
-import TodoList from '../screens/TodoList';
-import {
-  KeyboardAvoidingView,
-  Keyboard,
-  StyleSheet,
-  Text,
-  View,
-  TextInput,
-  TouchableOpacity,
-  SafeAreaView,
-  Platform,
-  FlatList,
-  Image,
-} from 'react-native';
+import Dialer from '../screens/Dialer/Dialer';
+import TodoList from '../screens/TodoList/TodoList';
+import {StyleSheet, Text, View, Image} from 'react-native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
 const Tab = createBottomTabNavigator();

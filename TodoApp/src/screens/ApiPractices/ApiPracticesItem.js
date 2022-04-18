@@ -23,7 +23,7 @@ const ApiPracticesItem = props => {
             ? {
                 uri: props.item?.imageSrc,
               }
-            : require('../assets/sample_avatar.png')
+            : require('../../assets/sample_avatar.png')
         }
         style={styles.image}
       />
