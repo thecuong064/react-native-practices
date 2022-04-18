@@ -21,7 +21,7 @@ import {
 } from 'react-native';
 import userApis from '../api/usersApi';
 import postApi from '../api/postApi';
-import FlatListLoadMore from '../components/FlatListLoadMore';
+import {FlatListLoadMore} from '../components';
 
 const AxiosPractices = ({navigation}) => {
   const [userId, setUserId] = useState('');
