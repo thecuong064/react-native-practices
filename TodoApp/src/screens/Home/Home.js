@@ -73,7 +73,10 @@ function Home({route, navigation}) {
           title={Screens.MODALS}
           onPress={() => navigation.navigate(Screens.MODALS)}
         />
-        <HomeItem title="Blank" />
+        <HomeItem
+          title={Screens.BOTTOM_SHEET}
+          onPress={() => navigation.navigate(Screens.BOTTOM_SHEET)}
+        />
       </View>
     </SafeAreaView>
   );
