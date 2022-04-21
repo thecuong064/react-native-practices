@@ -22,6 +22,7 @@ const Screens = {
   BOTTOM_TABS: 'Bottom tabs',
   BEAUTIFUL_BOTTOM_TABS: 'Beautiful bottom tabs',
   AXIOS_PRACTICES: 'Axios practices',
+  MODALS: 'Modals',
 };
 
 export default Screens;

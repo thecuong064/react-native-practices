@@ -68,6 +68,13 @@ function Home({route, navigation}) {
           onPress={() => navigation.navigate(Screens.AXIOS_PRACTICES)}
         />
       </View>
+      <View style={styles.itemRow}>
+        <HomeItem
+          title={Screens.MODALS}
+          onPress={() => navigation.navigate(Screens.MODALS)}
+        />
+        <HomeItem title="Blank" />
+      </View>
     </SafeAreaView>
   );
 }

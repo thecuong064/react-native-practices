@@ -15,6 +15,7 @@ import {
   TodoList,
   TypicalList,
 } from '../screens';
+import {Modals} from '../screens/Modals';
 
 const Stack = createNativeStackNavigator();
 
@@ -50,6 +51,7 @@ const ApplicationNavigator = () => {
           name={Screens.AXIOS_PRACTICES}
           component={AxiosPractices}
         />
+        <Stack.Screen name={Screens.MODALS} component={Modals} />
       </Stack.Navigator>
     </NavigationContainer>
   );
